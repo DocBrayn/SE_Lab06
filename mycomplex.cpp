@@ -19,7 +19,7 @@ Complex::Complex (const Complex& aRval)
 Complex::~Complex()
 {
     Re = 0.0;
-    Im= 0.0;
+    Im = 0.0;
 }
 
 void Complex::Set (double aRe, double aIm)
@@ -93,10 +93,10 @@ Complex Complex::operator / (const double& aRval)
     return Result;
 }
 
-Complex& Complex::operator += (const Complex& arval)
+Complex& Complex::operator += (const Complex& aRval)
 {
-    Re += arval.Re;
-    Im += arval.Im;
+    Re += aRval.Re;
+    Im += aRval.Im;
     return *this;
 }
 
