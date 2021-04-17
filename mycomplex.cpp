@@ -54,9 +54,9 @@ Complex Complex :: operator - (const Complex & aRval)
 
 Complex Complex :: operator + (const double & aRval)
 {
-    Complex result;
-    result.Re = Re + aRval;
-    result.Im = Im;
+    Complex Result;
+    Result.Re = Re + aRval;
+    Result.Im = Im;
     return Result;
 }
 
@@ -156,15 +156,15 @@ Complex & Complex :: operator = (const double & aRval)
 istream & operator >> (istream & stream, Complex & aRval)
 {
     char tmp[256];
-    stream >> a.Re >> a.Im >> tmp;
+    stream >> aRval.Re >> aRval.Im >> tmp;
     return stream;
 }
 
 ostream & operator << (ostream & stream, Complex & aRval)
 {
-    stream << a.Re;
-    if(!(a.Im < 0)) stream << '+';
-    stream << a.Im << 'i';
+    stream << aRval.Re;
+    if(!(aRval.Im < 0)) stream << '+';
+    stream << aRval.Im << 'i';
     return stream;
 }
 
@@ -187,7 +187,7 @@ Complex operator - (const double & aLval, const Complex & aRval)
     Complex operator * (const double & aLval, const Complex & aRval)
 {
     Complex Result;
-    Result.Re = aLval * a.Re;
-    Result.Im = aLval * a.Im;
+    Result.Re = aLval * aRval.Re;
+    Result.Im = aLval * aRval.Im;
     return Result;
 }
